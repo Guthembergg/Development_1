@@ -2,9 +2,11 @@ package Multimedia;
 
 public class Video extends ElementoMultimediale implements Riproducibile,RegolabileInLuminosita{
     private int luminosita;
+    private int durata;
     private int volume;
-    public Video(String titolo,int durata, int luminosita, int volume){
-        super(titolo,durata);
+    public Video(String titolo,int durata,  int volume ,int luminosita){
+        super(titolo);
+        this.durata=durata;
         this.luminosita=luminosita;
         this.volume=volume;
     }
@@ -36,13 +38,14 @@ public class Video extends ElementoMultimediale implements Riproducibile,Regolab
     }
     public void play() {
         for (int i = 0; i < getDurata(); i++) {
+           System.out.print(getTitolo()+ ", volume:  ");
             for (int j = 0; j < getVolume(); j++) {
-                System.out.print(".");
-            }
+                System.out.print("!");
+            } System.out.print(" - luminosita: ");
             for (int k = 0; k < luminosita; k++) {
                 System.out.print("*");
             }
-            System.out.println(getTitolo() + "!");
+            System.out.println();
         }
     }
 }

@@ -19,7 +19,7 @@ package Multimedia;
         luminosita--;
     }
     public void show() {
-        System.out.print(getTitolo() + ": ");
+        System.out.print(getTitolo() + ", luminosità: ");
         for (int i = 0; i < getLuminosita(); i++) {
             System.out.print("*");
         }
