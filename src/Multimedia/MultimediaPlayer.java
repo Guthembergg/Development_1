@@ -9,7 +9,7 @@ public class MultimediaPlayer {
     public static void main(String[] args) {
         creaPlayer();
         playNow();
-        input.close();
+
     }
 
     public static void creaPlayer() {
@@ -81,6 +81,7 @@ public class MultimediaPlayer {
                 System.out.println("Scelta inesistente, riprova");
             }
         }
+        input.close();
     }
 
 
